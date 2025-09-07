@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xeotic.dev — Invite‑Only</title>
+  <meta name="description" content="Private, invite-only project. Request an invite via Discord." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="container header">
+    <div class="brand">
+      <span class="logo">X</span>
+      <span class="name">Xeotic<span class="dot">.dev</span></span>
+    </div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#rules">Rules</a>
+      <a href="#access" class="btn small">Request Invite</a>
+    </nav>
+  </header>
+
+  <main class="container hero">
+    <div class="hero-content">
+      <h1>Private project. <span class="gradient">Invite‑only access.</span></h1>
+      <p class="lead">
+        This site does not host or expose any downloads. If you want access, you must request an invite first.
+      </p>
+      <div class="cta">
+        <a id="discordButtonTop" class="btn primary" href="#" target="_blank" rel="noopener">Request via Discord</a>
+        <a class="btn ghost" href="#about">Learn More</a>
+      </div>
+      <div class="shield">
+        <div class="shield-row">
+          <span>Files are not hosted here</span>
+          <span class="dotsep">•</span>
+          <span>No public directory listing</span>
+          <span class="dotsep">•</span>
+          <span>Manual review required</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="about" class="container section">
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        Xeotic.dev is a private, invite‑only project. Access is granted at the owner’s discretion and only after manual review.
+        Nothing on this website is downloadable, and there are no public links to any files.
+      </p>
+      <p class="note">
+        Reminder: static websites (like GitHub Pages) always expose their own HTML/CSS/JS to visitors. Don’t put sensitive files in this repository.
+      </p>
+    </div>
+  </section>
+
+  <section id="rules" class="container section">
+    <div class="grid">
+      <div class="card">
+        <h3>Access Requirements</h3>
+        <ul class="checklist">
+          <li>Join the Discord server.</li>
+          <li>Stay for at least <strong>1 week</strong>.</li>
+          <li>Send at least <strong>10 messages</strong> while you’re there.</li>
+        </ul>
+        <p class="muted">
+          If you break a rule, the waiting time resets to <strong>1.5 weeks</strong> from the incident.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Notes</h3>
+        <ul class="dash">
+          <li>Requirements are verified manually. There is no automated verification on this site.</li>
+          <li>There are no downloads here. Any files are shared privately after review.</li>
+          <li>Request access by contacting the owner on Discord.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="access" class="container section">
+    <div class="card emphasis">
+      <h2>Request an Invite</h2>
+      <p>To request an invite, click the button below and contact the owner directly. Include your Discord tag and a short message.</p>
+      <a id="discordButtonBottom" class="btn primary large" href="#" target="_blank" rel="noopener">Open Discord</a>
+      <div class="contact-hint">
+        Want a custom link? Edit the <code>href</code> for the buttons in <code>index.html</code> to a Discord invite, server channel, or DM link.
+      </div>
+    </div>
+  </section>
+
+  <footer class="container footer">
+    <div class="foot-left">© <span id="year"></span> Xeotic.dev — Invite‑only</div>
+    <div class="foot-right">
+      <a href="#about">About</a>
+      <a href="#rules">Rules</a>
+      <a href="#access">Request Invite</a>
+    </div>
+  </footer>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Example: set your Discord links in one place
+    const DISCORD_LINK = "https://discord.com"; // <-- replace with your invite or DM link
+    document.getElementById('discordButtonTop').href = DISCORD_LINK;
+    document.getElementById('discordButtonBottom').href = DISCORD_LINK;
+  </script>
+</body>
+</html>
