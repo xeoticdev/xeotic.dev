@@ -1,2 +1,3 @@
 # xeotic.dev
-Good Gamesense Lua For CSGO
+
+get good, get xeotic.
